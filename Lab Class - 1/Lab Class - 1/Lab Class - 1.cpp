@@ -1,28 +1,33 @@
 #include <iostream>
 using namespace std;
 
+// Class Calculator , Private Members , Setter and Getter , Call in Void
+// Get all object values by user
+class Circle {
+private:
+    int r;
+public:
+    void setr(int r1) {
+        r = r1;
+    }
+    void calculate() {
+        double sum;
+        sum = getr() * 3.14;
+        cout << getr() << " " << sum << endl;
+    }
+    int getr() {
+        return r;
+    }
+};
 
-void add(int a, int b) {
-    cout << "Additon of Numbers:" << a + b << endl;
-}
-void sub(int a, int b) {
-    cout << "Subtraction of Numbers:" << a - b << endl;
-}
-void mult(int a, int b) {
-    cout << "Multiplication of Numbers:" << a * b << endl;
-}
-void division(int a, int b) {
-    cout << "Division of Numbers:" << (a / b) << endl;
-}
 int main()
 {
-    int a, b;
-    cout << "Enter Number 1:";
-    cin >> a;
-    cout << "Enter Number 2:";
-    cin >> b;
-    add(a, b);
-    sub(a, b);
-    mult(a, b);
-    division(a, b);
+    Circle c1; // Creation of Object c1
+    c1.setr(5);
+    //cout << c1.getr();
+    Circle c2; // Creation of Object c2
+    c2.setr(6);
+    //cout << c2.getr();
+    c1.calculate();
+    c2.calculate();
 }
