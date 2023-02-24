@@ -1,83 +1,83 @@
 #include <iostream>
 using namespace std;
 
-class Pen {
-
+class Pen{
 private:
-    string company;
+    string companyName;
     string color;
-    int height;
     int price;
-
+    float height;
 public:
-    void setName(string Name) {
-        company = Name;
+    // Setting Variables Values
+    void setName(string company) {
+        companyName = company;
     }
-    void setColor(string col) {
-        color = col;
+    void setColor(string c) {
+        color = c;
     }
-    void setHeight(int h) {
+    void setPrice(int p) {
+        price = p;
+    }
+    void setHeight(float h) {
         height = h;
     }
-    void setPrice(int pr) {
-        price = pr;
-    }
 
+    // Getting Variables Values
     string getName() {
-        return company;
+        return companyName;
     }
     string getColor() {
         return color;
     }
-    int getHeight() {
-        return height;
-    }
     int getPrice() {
         return price;
     }
-    void display() {
-        cout << "Displaying Information About Pen ";
-        cout << "Company Name: " << company << endl;
-        cout << "Color: " << color << endl;
-        cout << "Height: " << height << endl;
-        cout << "Price: " << price << endl;
+    float getHeight() {
+        return height;
     }
+    //void display() {
+    //    cout << "Company Name: " << companyName << endl;
+    //    cout << "Color: " << color << endl;
+    //    cout << "Price: " << price << endl;
+    //    cout << "Height: " << height << endl;
+    //}
 };
-
 int main()
 {
-
-    int numPens;
-    cout << "Enter the number of Pens you want to save: ";
-    cin >> numPens;
-
-    Pen* pens = new Pen[numPens];
-
-    string company;
+    int num;
+    cout << "How many Pen data you want to Enter:";
+    cin >> num;
+    Pen* pens = new Pen[num];
+    string name;
     string color;
-    int height, price;
-    for (int i = 0; i < numPens; i++) {
-        cout << "Enter Company Name: ";
-        cin >> company;
-        pens[i].setName(company);
-        cout << "Enter Color: ";
+    int price;
+    float height;
+    for (int i = 0; i < num; i++) {
+        cout << "Enter Details for Pen " << (i + 1) << ":" << endl;
+        cout << "Company Name: ";
+        cin >> name ;
+        pens[i].setName(name);
+        cout << "Color: ";
         cin >> color;
         pens[i].setColor(color);
-        cout << "Enter Height: ";
-        cin >> height;
-        pens[i].setHeight(height);
-        cout << "Enter Price: ";
+        cout << "Price: ";
         cin >> price;
         pens[i].setPrice(price);
+        cout << "Height: ";
+        cin >> height;
+        pens[i].setHeight(height);
+        cout << endl;
     }
-    for (int i = 0; i < numPens; i++) {
-        cout << "Displaying Information About Pen " << (i + 1) << endl;
+    cout << " \n \n \n \n \n \n \n \n \n";
+    cout << "--------------------" << endl;
+    for (int i = 0; i < num; i++) {
+        cout << "Details for Pen " << (i + 1) << ":" << endl;
         cout << "Company Name: " << pens[i].getName() << endl;
         cout << "Color: " << pens[i].getColor() << endl;
-        cout << "Height: " << pens[i].getHeight() << endl;
         cout << "Price: " << pens[i].getPrice() << endl;
+        cout << "Height: " << pens[i].getHeight() <<endl;
+        cout << "--------------------" << endl;
     }
-
     delete[] pens;
     return 0;
 }
