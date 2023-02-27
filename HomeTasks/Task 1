@@ -1,1 +1,167 @@
-Test
+#include <iostream>
+using namespace std;
+
+class Pen{
+private:
+    string companyName;
+    string color;
+    int price;
+    float height;
+public:
+    // Setting Variables Values
+    void setName(string company) {
+        companyName = company;
+    }
+    void setColor(string c) {
+        color = c;
+    }
+    void setPrice(int p) {
+        price = p;
+    }
+    void setHeight(float h) {
+        height = h;
+    }
+
+    // Getting Variables Values
+    string getName() {
+        return companyName;
+    }
+    string getColor() {
+        return color;
+    }
+    int getPrice() {
+        return price;
+    }
+    float getHeight() {
+        return height;
+    }
+    //void display() {
+    //    cout << "Company Name: " << companyName << endl;
+    //    cout << "Color: " << color << endl;
+    //    cout << "Price: " << price << endl;
+    //    cout << "Height: " << height << endl;
+    //}
+};
+int main()
+{
+    int num;
+    cout << "How many Pen data you want to Enter:";
+    cin >> num;
+    Pen* pens = new Pen[num];
+    string name;
+    string color;
+    int price;
+    float height;
+    for (int i = 0; i < num; i++) {
+        cout << "Enter Details for Pen " << (i + 1) << ":" << endl;
+        cout << "Company Name: ";
+        cin >> name ;
+        pens[i].setName(name);
+        cout << "Color: ";
+        cin >> color;
+        pens[i].setColor(color);
+        cout << "Price: ";
+        cin >> price;
+        pens[i].setPrice(price);
+        cout << "Height: ";
+        cin >> height;
+        pens[i].setHeight(height);
+        cout << endl;
+    }
+    cout << " \n \n \n \n \n \n \n \n \n";
+    cout << "--------------------" << endl;
+    for (int i = 0; i < num; i++) {
+        cout << "Details for Pen " << (i + 1) << ":" << endl;
+        cout << "Company Name: " << pens[i].getName() << endl;
+        cout << "Color: " << pens[i].getColor() << endl;
+        cout << "Price: " << pens[i].getPrice() << endl;
+        cout << "Height: " << pens[i].getHeight() <<endl;
+        cout << "--------------------" << endl;
+    }
+    delete[] pens;
+    return 0;
+}
+
+//#include <iostream>
+//using namespace std;
+//
+//class Pen {
+//
+//private:
+//    string company;
+//    string color;
+//    int height;
+//    int price;
+//public:
+//    void setName(string Name) {
+//        company = Name;
+//    }
+//    void setColor(string col){
+//        color = col;
+//    }
+//    void setHeight(int h) {
+//        height = h;
+//    }
+//    void setPrice(int pr) {
+//        price = pr;
+//    }
+//
+//    string getName() {
+//        return company;
+//    }
+//    string getColor() {
+//        return color;
+//    }
+//    int getHeight() {
+//        return height;
+//    }
+//    int getPrice() {
+//        return price;
+//    }
+//    void display() {
+//        cout << "Displaying Information About Pen ";
+//        cout << "Company Name: " << company << endl;
+//        cout << "Color: " << color << endl;
+//        cout << "Height: " << height << endl;
+//        cout << "Price: " << price << endl;
+//    }
+//};
+//
+//int main()
+//{
+//
+//    int num;
+//    cout << "Enter the number of Pen you want to save: ";
+//    cin >> num;
+//
+//    Pen* num = new Pen[num];
+//
+//
+//    //Pen* ptr = new Pen();
+//    string company;
+//    string color;
+//    int height, price;
+//    for (int i = 0; i < 10; i++) {
+//        cout << "Enter Company Name: ";
+//        cin >> company;
+//        num[i].setName(company);
+//        cout << "Enter Color: ";
+//        cin >> color;
+//        p[i].setColor(color);
+//        cout << "Enter Height: ";
+//        cin >> height;
+//        p[i].setHeight(height);
+//        cout << "Enter Price: ";
+//        cin >> price;
+//        p[i].setPrice(price);
+//    }
+//    for (int i = 0; i < 2; i++) {
+//        cout << "Displaying Information About Pen " << (i + 1) << endl;
+//        cout << "Company Name: " << p[i].getName() << endl;
+//        cout << "Color: " << p[i].getColor() << endl;
+//        cout << "Height: " << p[i].getHeight() << endl;
+//        cout << "Price: " << p[i].getPrice() << endl;
+//    }
+//}
+Footer
+
