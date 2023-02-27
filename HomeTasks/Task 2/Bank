@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Bank{
+private:
+    string name;
+    string address;
+    int code;
+public:
+    Bank(){
+        cout << "Welcome To The Bank:" << endl;
+    }
+    Bank(string n, string a, int c){
+        name = n;
+        address = a;
+        code = c;
+        cout << "Bank Name: " << name << endl;
+        cout << "Bank Address: " << address << endl;
+        cout << "Bank Code: " << code << endl;
+    }
+    Bank (string n){
+        name = n;
+        cout << "Bank Name: " << name << endl;
+    }
+    Bank (int c){
+        code = c;
+        cout << "Bank Code: " << code << endl;
+    }
+};
+
+int main() {
+    Bank a;
+    Bank b("HBL", "Lahore", 111);
+    Bank c("Faysal");
+    Bank d(1112);
+}
