@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+class Pen{
+private:
+    string companyName;
+    string color;
+    float height;
+    int price;
+public:
+    Pen(){ // Default Constructor
+        cout << "-----------------" << endl;
+        cout << "No Args passed to Constructor" << endl;
+        cout << "-------------------" << endl;
+    }
+    Pen(string n, string c, float h, float p){  // Parameterized Constructor
+        companyName = n;
+        color = c;
+        height = h;
+        price = p;
+        cout << "Displaying Information About Pen:" << endl;
+        cout << "Company Name: " << companyName << endl;
+        cout << "Color: " << color << endl;
+        cout << "Height: " << height << endl;
+        cout << "Price: " << price << endl;
+        cout << "-----------------" << endl;
+    }
+    Pen(string n, string c){
+        companyName = c;
+        color = c;
+        cout << "Displaying Information About Pen:" << endl;
+        cout << "Company Name: " << companyName << endl;
+        cout << "Color: " << color << endl;
+        cout << "-----------------" << endl;
+    }
+    Pen(float h, int p){
+        height = h;
+        price = p;
+        cout << "Displaying Information About Pen:" << endl;
+        cout << "Height: " << height << endl;
+        cout << "Price: " << price << endl;
+        cout << "-----------------" << endl;
+    }
+};
+
+int main() {
+    Pen p;
+    Pen p2("Dollar", "Blue", 9.8, 100);
+    Pen p3("Dollar", "Black");
+    Pen p4(8.9, 1000);
+}
