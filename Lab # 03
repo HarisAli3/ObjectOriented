@@ -1,0 +1,163 @@
+#include <iostream>
+using namespace std;
+// declare , reverse , decimal value
+class Num{
+private:
+    int num;
+public:
+    void reverse();
+};
+void Num::reverse(){
+
+}
+int main(){
+}
+
+//class User {
+//private:
+//    float num;
+//    float a, b, c, d;
+//public:
+//    User() {
+//        int U;
+//        cout << "User Interfernce " << endl;
+//        cout << "Enter 1 to Find Area of Cirle" << endl;
+//        cout << "Enter 2 to Find Greater of Numbers" << endl;
+//        cout << "Enter 0 to Exit\n";
+//        cin >> U;
+//        switch (U){
+//            case 1:
+//                area();
+//                User();
+//                break;
+//            case 2:
+//                greater();
+//                User();
+//                break;
+//            case 0:
+//                cout << "Program Closed!";
+//                exit;
+//        }
+//    }
+//    void area() {
+//        cout << "Enter Radius of Cirlce:";
+//        cin >> num;
+//        float Pi = 3.14;
+//        float area = Pi * (num * num);
+//        cout << "Area of Circle: " << area << endl;
+//    }
+//    void greater(){
+//        cout << "Enter Number A:";
+//        cin >> a;
+//        cout << "Enter Number B:";
+//        cin >> b;
+//        cout << "Enter Number C:";
+//        cin >> c;
+//        cout << "Enter Number D:";
+//        cin >> d;
+//        if (a > b && a > c && a > d){
+//            cout << "Number A :" << a << endl;
+//        } else if (b > a && b > c && b > d){
+//            cout << "Number B :" << b << endl;
+//        } else if (c > a && c > b && c > d){
+//            cout << "Number C :" << c << endl;
+//        } else if (d > a && d > b && d > c){
+//            cout << "Number D :" << d << endl;
+//        } else {
+//            cout << "All are Equal" << endl;
+//        }
+//    }
+//};
+//
+//int main() {
+//    User z;
+//    return 0;
+//}
+
+//        while (U > -1){
+//            if (U == 1){
+//                area();
+//                User();
+//            } else if (U == 2){
+//                greater();
+//                User();
+//            } else if (U == 0) {
+//                cout << "Program Closed!";
+//                break;
+//            }
+//            int U;
+//            cout << "User Interfernce " << endl;
+//            cout << "Enter 1 to Find Area of Cirle" << endl;
+//            cout << "Enter 2 to Find Greater of Numbers" << endl;
+//            cout << "Enter 0 to Exit\n";
+//            cin >> U;
+//        }
+
+//        while (U > -1){
+//            if (U == 1){
+//                area();
+//                User();
+//            } else if (U == 2){
+//                greater();
+//                User();
+//            } else if (U == 0) {
+//                cout << "Program Closed!";
+//                break;
+//            }
+//            int U;
+//            cout << "User Interfernce " << endl;
+//            cout << "Enter 1 to Find Area of Cirle" << endl;
+//            cout << "Enter 2 to Find Greater of Numbers" << endl;
+//            cout << "Enter 0 to Exit\n";
+//            cin >> U;
+//        }
+
+//    cout << "Enter Radius of Cirlce:";
+//    cin >> num;
+//    cout << "Enter Number A:";
+//    cin >> a;
+//    cout << "Enter Number B:";
+//    cin >> b;
+//    cout << "Enter Number C:";
+//    cin >> c;
+//    cout << "Enter Number D:";
+//    cin >> d;
+//    while (cont > 0){
+//        n.area(num);
+//        n.greater(a, b, c, d);
+//        cout << "Do you want to continue or Leave \n";
+//        cout << "Enter Negative Number to Close Program :";
+//        cin >> cont;
+//        if (cont < 0){
+//            break;
+//        }
+//        cout << "Enter Radius of Cirlce:";
+//        cin >> num;
+//        cout << "Enter Number A:";
+//        cin >> a;
+//        cout << "Enter Number B:";
+//        cin >> b;
+//        cout << "Enter Number C:";
+//        cin >> c;
+//        cout << "Enter Number D:";
+//        cin >> d;
+//    }
+
+//class Factorial{
+//private:
+//    int factorial;
+//public:
+//    Factorial(int num){
+//        factorial = 1;
+//        if (num == 0){
+//            cout << "Factorial of Number = " << factorial << endl;
+//        } else if (num < 0){
+//            cout << "There is no factorial for negative Number " << endl;
+//        } else {
+//            for (int i = 1; i <= num ; ++i)
+//                factorial *= i;
+//            cout << "Factorial of Number is " << factorial << endl;
+//        }
+//    }
+//};
+// :: Scope Resolution Operator
