@@ -1,0 +1,158 @@
+#include <iostream>
+using namespace std;
+// Fibonnaci Series
+class Fibonnaci{
+private:
+    int n, t1 = 0, t2 = 1, nextTerm = 0;
+public:
+    void series() {
+        cout << "Enter a positive number: ";
+        cin >> n;
+
+        // displays the first two terms which is always 0 and 1
+        cout << "Fibonacci Series: " << t1 << ", " << t2 << ", ";
+
+        nextTerm = t1 + t2;
+
+        while(nextTerm <= n) {
+            cout << nextTerm << ", ";
+            t1 = t2;
+            t2 = nextTerm;
+            nextTerm = t1 + t2;
+        }
+    }
+};
+int main(){
+    Fibonnaci f;
+    f.series();
+}
+
+
+
+
+//class Box{
+//private:
+//    float height, width, breadth;
+//public:
+//    Box(float h, float w, float b){
+//        height = h;
+//        width = w;
+//        breadth = b;
+//    }
+//    void display(){
+//        cout << "Height :" << height << endl;
+//        cout << "Width:" << width << endl;
+//        cout << "Breadth:" << breadth << endl;
+//
+//        cout << "Volume :" << (height * width * breadth) << endl;
+//    }
+//};
+//int main(){
+//    float h, w, b;
+//    cout << "Enter Height:";
+//    cin >> h;
+//    cout << "Enter Width:";
+//    cin >> w;
+//    cout << "Enter Breadth:";
+//    cin >> b;
+//    Box b1(h, w, b);
+//    b1.display();
+//    Box b2(b1);
+//    b2.display();
+//}
+// Pointer . multiple objects
+// 2 values rom user
+// simple object
+// pointer object
+// Multiple Objects (name , id)
+
+//class Employee{
+//private:
+//    string name;
+//    int id;
+//public:
+//    void set(string n, int i){
+//        name = n;
+//        id = i;
+//    }
+//    void get(){
+//        cout << "Employee Name:" << name << endl;
+//        cout << "Employee Id:" << id << endl;
+//    }
+//};
+//int main() {
+//    Employee e1, *e2;
+//    string n;
+//    int i;
+//    cout << "Enter Employee Name:";
+//    cin >> n;
+//    cout << "Enter Employee Id:";
+//    cin >> i;
+//    e1.set(n, i);
+//    e1.get();
+//    e2 = &e1;
+//    e2->get();
+//    return 0;
+//}
+
+//class Employee{
+//private:
+//    string name;
+//    int id;
+//public:
+//    void setValues(string n, int i){
+//        name = n;
+//        id = i;
+//    }
+//    void get(){
+//        cout << "Employee Name:" << name << endl;
+//        cout << "Employee Id:" << id << endl;
+//    }
+//};
+//int main(){
+//    Employee *e;
+//    int num;
+//    cout << "How many Employee Data You want to Enter:";
+//    cin >> num;
+//    e = new Employee[num];
+//    string n;
+//    int id;
+//    for (int i = 0; i < num; i++){
+//        cout << "Enter Employee Name:";
+//        cin >> n;
+//        cout << "Enter Employee Id:";
+//        cin >> id;
+//        e[i].setValues(n, id);
+//    }
+//    for (int i = 0; i < num; i++){
+//        e[i].get();
+//    }
+//}
+
+//class Employee{
+//private:
+//    string name;
+//    int id;
+//public:
+//    Employee(string n, int i){
+//        name = n;
+//        id = i;
+//    }
+//    void get(){
+//        cout << "Employee Name:" << name << endl;
+//        cout << "Employee Id:" << id << endl;
+//    }
+//};
+//int main() {
+//    string n;
+//    int i;
+//    cout << "Enter Employee Name:";
+//    cin >> n;
+//    cout << "Enter Employee Id:";
+//    cin >> i;
+//    Employee e1(n, i);
+//    e1.get();
+//    Employee e2(e1);
+//    e2.get();
+//    return 0;
+//}
