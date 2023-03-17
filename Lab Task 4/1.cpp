@@ -1,3 +1,17 @@
+int main(){
+ student obj1, obj2, obj3;
+ obj1.setName("Haris Ali");
+ obj1.setMarks(66);
+ ob2.setName("Hassan");
+ obj.setMarks(33);
+ obj1.getName();
+ obj1.getMarks();
+ obj2.getName();
+ obj.getMarks();
+ obj.calculation_Marks(33, 66);
+}
+
+/*
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -27,4 +41,4 @@ int main() {
     cout << "P 1:" << p1.getName() << endl;
     cout << "P 2:" << p2.getName() << endl;
     return 0;
-}
+}*/
