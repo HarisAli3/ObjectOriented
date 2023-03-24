@@ -1,0 +1,99 @@
+#include <iostream>
+2 class 1 and 2 
+        2 data members
+        *id , marks
+        friend function 
+        sum id -> id
+        sum marks -> marks
+using namespace std;
+
+class b;
+class a{
+private:
+    int num1;
+public:
+    void setNum1(int num1){
+        this->num1 = num1;
+    }
+    friend void swap(a a1, b b1);
+    void d_a(){
+        cout << "Num 1 of Class A:" << num1 << endl;
+    }
+};
+
+class b{
+private:
+    int num2;
+public:
+    void setNum2(int num2){
+        this->num2 = num2;
+    }
+    friend void swap(a s1, b b1);
+    void d_b(){
+        cout << "Num 2 of Class B:" << num2 << endl;
+    }
+};
+
+void swap(a a1, b b1){
+    a a2;
+    cout << "Before Swapping:" << endl;
+    a1.d_a();
+    b1.d_b();
+    cout << "--Doing Swapping--" << endl;
+    a2.num1 = a1.num1;
+    a1.num1 = b1.num2;
+    b1.num2 = a2.num1;
+    cout << "After Swapping:" << endl;
+    a1.d_a();
+    b1.d_b();
+}
+
+int main() {
+    a a1;
+    b b1;
+    int a, b;
+    cout << "Enter Num 1:";
+    cin >> a;
+    cout << "Enter Num 2:";
+    cin >> b;
+    a1.setNum1(a);
+    b1.setNum2(b);
+    swap(a1, b1);
+    return 0;
+}
+
+
+/*
+#include <iostream>
+#include "Pen.h"
+using namespace std;
+
+*/
+/*
+ Static Keyboard
+ * Data Member
+ * Syntax:
+ * static Datatype nameof variable;
+ * Initialize the dataMember
+ * create multiple obbjects
+ *
+ * It is created when programs run and is only deleted when program terminates
+ * int student::objects_created = 0;
+
+ * Member Function
+ * without static and with static keyword
+ * marks , id
+ * void student::display()
+ * student::display()
+ *
+ *
+ * Benefits
+ * If we have Low Memory use static keyword
+ *
+*//*
+
+int main() {
+
+    return 0;
+}
+*/
