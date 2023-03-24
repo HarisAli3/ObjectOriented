@@ -1,0 +1,59 @@
+ * Static Keyboard
+ * Data Member
+ * Syntax:
+ * static Datatype nameof variable;
+ * Initialize the dataMember
+ * create multiple obbjects
+ *
+ * It is created when programs run and is only deleted when program terminates
+ * int student::objects_created = 0;
+
+ * Member Function
+ * without static and with static keyword
+ * marks , id
+ * void student::display()
+ * student::display()
+ *
+ *
+ * Benefits
+ * If we have Low Memory use static keyword
+ *
+
+ * Friend Function
+ Use to access private and protected data Members
+ -> Declare within the class and
+ -> Always define outside the class
+ E.g:
+ . friend int sum(demo)
+ . void demo::getdata(){}
+ . int sum(demo obj){
+
+ -> Not a part of Class and can't be access via objects
+ Benefits:
+ Access private data Members
+
+  * Friend Classes
+  class test
+  int x, y;
+  friend void sum(demo aa, test bb);
+
+  class demo
+  float a, b;
+  friend void sum(demo aa, test bb);
+
+ void sum(demo aa, test bb){
+    demo s4;
+    s4.a = bb.x + aa.a;
+    s3.b = bb.y + aa.b;
+ }
+ void main(){
+
+ demo aa;
+ test bb;
+ sum(aa, bb);
+ }
+
+  1 - Two classes , different values , swap , friend function
+  Both data members would be private
+  1st class value to Second Class Value
+
