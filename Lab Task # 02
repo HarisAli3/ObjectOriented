@@ -1,0 +1,78 @@
+/* 
+Create 2 Class and objects of Each Class
+Create *Id and Marks
+Sum Objects (*Id and Marks) using Friend Function
+*/
+#include <iostream>
+using namespace std;
+
+class Class_B;
+class Class_A {
+private:
+    int *id;
+    int marks;
+
+public:
+    Class_A() {
+        id = new int;
+    }
+    void setId(int id) {
+        *(this->id) = id;
+    }
+
+    void setMarks(int marks) {
+        this->marks = marks;
+    }
+
+    friend void addId(Class_A a, Class_B b);
+
+};
+
+class Class_B {
+private:
+    int *id;
+    int marks;
+public:
+    Class_B() {
+        id = new int;
+    }
+    void setId(int id) {
+        *(this->id) = id;
+    }
+
+    void setMarks(int marks) {
+        this->marks = marks;
+    }
+
+    friend void addId(Class_A a, Class_B b);
+};
+
+void addId(Class_A a, Class_B b) {
+    int id = *(a.id) + *(b.id);
+    int marks = a.marks+ b.marks;
+    cout << "--Adding Id and Marks Using Friends Function--" << endl;
+    cout << "Sum Of Ids: " << id << endl;
+    cout << "Sum of Marks: " << marks << endl;
+}
+
+int main() {
+    Class_A a;
+    int id, marks;
+    cout << "--Details for Student 1--" <<endl;
+    cout << "Enter Id:";
+    cin >> id;
+    cout << "Enter Marks:";
+    cin >> marks;
+    a.setId(id);
+    a.setMarks(marks);
+    Class_B b;
+    cout << "--Details for Student 2--" << endl;
+    cout << "Enter Id:";
+    cin >> id;
+    cout << "Enter Marks:";
+    cin >> marks;
+    b.setId(id);
+    b.setMarks(marks);
+    addId(a, b);
+    return 0;
+}
