@@ -1,0 +1,48 @@
+Introduction to Classes
+Access Specifiers
+Constructor
+Deep Copy and Shallow Copy
+Destructors
+Static and Const Keywords
+
+Inheritance (Code from one class to second class)
+Visibility Control (Public , Private, Protected)
+Public{
+  Public -> Public
+  Protected -> Protected
+  No Private Access
+}
+
+Protected{
+  Public -> Protected
+  Protected -> Protected
+  No Private Access
+}
+
+Private{
+  Public -> Private
+  Protected -> Private
+  Private -> Private
+}
+
+Types of Inheritance
+
+Single 
+  
+Multilevel {
+  A --> B --> C --> D
+  class A{};
+  class B: class A{};
+  class C: class B{};
+}
+
+Multiple{
+  A,B --> C
+  class A{};
+  class B{};
+  class C: public A, public B{};
+}
+
+Hybrid{
+  Class (Multiple + Multilevel)
+}
