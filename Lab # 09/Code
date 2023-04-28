@@ -1,0 +1,151 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle{
+public:
+    int height_r;
+    Rectangle(int height_r): height_r(height_r){}
+};
+
+class Cirlce{
+public:
+    int radius;
+    Cirlce(int radius): radius(radius){}
+
+};
+
+class Cylinder: public Rectangle, public  Cirlce{
+public:
+    int height;
+    Cylinder(int height, int height_r, int radius): Rectangle(height_r), Cirlce(radius){
+        this->height = height;
+    }
+};
+int main(){
+    Cylinder c(10, 20, 20);
+    cout << c.height << endl;
+    cout << c.height_r << endl;
+    cout << c.radius << endl;
+}
+
+
+
+
+
+/*#include <iostream>
+using namespace std;
+
+class Shape{
+public:
+    string shape;
+    Shape(string shape): shape(shape){}
+    ~Shape(){
+        cout << "Destructor Called for Class Shape" << endl;
+    }
+};
+
+class Color{
+public:
+    string color;
+    Color(string color): color(color){}
+    ~Color(){
+        cout << "Destructor Called for Class Color" << endl;
+    }
+};
+
+class ColoredShape: public Shape, public Color{
+public:
+    ColoredShape(string shape, string color): Shape(shape), Color(color){}
+    ~ColoredShape(){
+        cout << "Destructor Called for Class ColoredShape" << endl;
+    }
+};
+int main(){
+    ColoredShape c("Rectangle", "Blue");
+    cout << c.shape << endl;
+    cout << c.color << endl;
+}*/
+
+
+
+
+/*#include <iostream>
+using namespace std;
+
+class Vehicle{
+public:
+    string name;
+    Vehicle(string name): name(name){}
+    ~Vehicle(){
+        cout << "Destructor Called for Class Vehicle" << endl;
+    }
+};
+
+class FourWheeler: public  Vehicle{
+public:
+    int model;
+    int seatingCapacity;
+    FourWheeler(int model, int seatingCapacity, string name): Vehicle(name) , model(model), seatingCapacity(seatingCapacity){}
+    ~FourWheeler(){
+        cout << "Destructor Called for Class FourWheeler" << endl;
+    }
+};
+
+class Car: public FourWheeler{
+public:
+    string color;
+    Car(string name, string color, int model, int seatingCapacity): FourWheeler(model, seatingCapacity, name), color(color){}
+    ~Car(){
+        cout << "Destructor Called for Class Car" << endl;
+    }
+};
+
+int main(){
+    Car c("Ferrari", "Grey", 2023, 2);
+    cout << c.name << endl;
+    cout << c.color << endl;
+    cout << c.model << endl;
+    cout << c.seatingCapacity << endl;
+}*/
+
+
+
+
+
+
+
+
+/*
+#include <iostream>
+using namespace std;
+
+class Shape{
+public:
+    string name;
+    string color;
+    Shape(string name, string color): name(name), color(color){}
+    ~Shape(){
+        cout << "Destructor Called for Shape Class" << endl;
+    }
+};
+
+class Circle: public Shape{
+public:
+    int radius;
+    Circle(string name, string color, int radius) : Shape(name, color), radius(radius) {
+//        this->radius = radius;
+    }
+    ~Circle(){
+        cout << "Destructor Called for Circle Class" << endl;
+    }
+
+};
+int main() {
+    Circle c("Box", "Yellow", 10);
+    cout<< c.name << endl;
+    cout << c.color << endl;
+    cout << c.radius << endl;
+    return 0;
+}
+*/
+
