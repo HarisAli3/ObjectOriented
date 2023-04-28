@@ -1,0 +1,40 @@
+Default Constructors:
+
+  MultiLevel Inheritance:
+      Constructors:
+          A -> B -> C
+        Desturctors
+          C -> B -> A
+    C(): A(), B(){}
+
+Mutliple Inheritance:
+   Class C: public B , public A
+     B -> C -> A
+
+Hybrid Inheritance:
+  A , B + C = D
+  class D : public C, public B {}
+
+
+Parameterized Constructors:
+  MultiLevel Inheritance:
+  class A{}
+  pubic:
+  A(int x, int z){};
+  class B : public A{
+  public:
+    B(int x,int z, float y): A(x, z){}
+};
+
+  Multiple Inheritance:
+    class A{
+    pubic:
+    A(int x){}
+  };
+  class B{
+pubic:
+  A(int z){}
+};
+    class B: public A, public C{
+    public:
+      B(int x,int z, float y): A(x), C(z){}
