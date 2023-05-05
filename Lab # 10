@@ -1,0 +1,188 @@
+//Composition:
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Customer{
+public:
+    string name;
+    string address;
+    string phoneNo;
+    float bal;
+    Customer(){
+        cout << "Enter Customer Name:";
+        cin.ignore();
+        getline(cin, name);
+        cout << "Enter Address:";
+        cin >> address;
+        cout << "Enter Phone Number:";
+        cin >> phoneNo;
+        cout << "Enter Balance:";
+        cin >> bal;
+    }
+    void show_Customer(){
+        cout << "Customer Name:" << name << endl;
+        cout << "Customer Address:" << address << endl;
+        cout << "Customer PhoneNumber:" << phoneNo << endl;
+    }
+//    ~Customer(){
+//        cout << "Customer Name:" << name << endl;
+//        cout << "Customer Address:" << address << endl;
+//        cout << "Customer PhoneNumber:" << phoneNo << endl;
+//    }
+};
+class Bank{
+public:
+    string accountNumber;
+    float balance;
+    Customer c;
+    Bank(){
+        cout << "Enter Account Number:";
+        cin.ignore();
+        getline(cin, accountNumber);
+    }
+    void deposit(){
+        int deposit;
+        cout << "Enter Amount to Deposit:";
+        cin >> deposit;
+        c.bal += deposit;
+    }
+    void show(){
+        c.show_Customer();
+    }
+void withdraw() {
+    int withdraw;
+    cout << "Enter Amount to Withdraw:";
+    cin >> withdraw;
+    if (withdraw <= c.bal) {
+        c.bal = withdraw - c.bal;
+        show();
+    }
+}
+};
+
+int main(){
+    Bank b;
+    char c;
+    cout << "Enter 1 to Deposit Money\nEnter 2 to withdraw Money\nEnter 3 to view account details\n:";
+    cin >> c;
+    switch(c){
+            case '1':
+                b.deposit();
+                break;
+            case '2':
+                b.withdraw();
+                break;
+    }
+}
+
+// Aggregation:
+//#include <iostream>
+//using namespace std;
+//class Monitor{
+//public:
+//    char companyName[30]{};
+//    int size{};
+//    float price{};
+//    Monitor(){
+//        cout << "Company Name of Monitor:";
+//        cin.get(companyName, 30);
+//        cin.ignore();
+//        cout << "Enter Size of Monitor:";
+//        cin >> size;
+//        cout << "Enter Price of Monitor:";
+//        cin >> price;
+//    }
+//    ~Monitor(){
+//        cout << endl << endl;
+//        cout << "Name of Monitor:" << companyName << endl;
+//        cout << "Size of Monitor:" << size << endl;
+//        cout << "Price of Monitor:" << price << endl;
+//    }
+//};
+//class CPU{
+//public:
+//    char companyName[30]{};
+//    int speed{};
+//    float price{};
+//    CPU(){
+//
+//        cout << "Company Name of CPU:";
+//        cin.ignore();
+//        cin.get(companyName, 30);
+//        cout << "Enter Speed of CPU:";
+//        cin >> speed;
+//        cout << "Enter Price of CPU:";
+//        cin >> price;
+//    }
+//    ~CPU(){
+//        cout << endl << endl;
+//        cout << "Name of CPU:" << companyName << endl;
+//        cout << "Speed of CPU:" << speed << endl;
+//        cout << "Price of CPU:" << price << endl;
+//    }
+//};
+//class Keyboard{
+//public:
+//    char companyName[30]{};
+//    int numofKeys{};
+//    float price{};
+//    Keyboard(){
+//        cout << endl;
+//        cout << "Company Name of Keyboard:";
+//        cin.ignore();
+//        cin.get(companyName, 30);
+//        cout << "Enter Num of Keys of Keyboard:";
+//        cin >> numofKeys;
+//        cout << "Enter Price of Keyboard:";
+//        cin >> price;
+//    }
+//    ~Keyboard(){
+//        cout << endl << endl;
+//        cout << "Name of Keyboard:" << companyName << endl;
+//        cout << "Keys of Keyboard:" << numofKeys << endl;
+//        cout << "Price of Keyboard:" << price << endl;
+//    }
+//};
+//class Computer_System{
+//public:
+//    Monitor m;
+//    CPU c;
+//    Keyboard k;
+//};
+//int main() {
+//    Computer_System c;
+//    return 0;
+//}
+
+
+
+
+
+
+
+Relation:
+  Many to one
+  one to Many
+  Many to Many
+
+Association (is a relationship):
+  FULL Weak
+Aggregation:
+      A depends on B
+      If B is removed, and A still exists then it is Aggregation
+      weak
+    Example::Employee and Company
+        Pointer Type object creation in other class
+
+Composition:
+      A depends on B
+      If B is removed, and A also get removed then it is Composition
+      strong
+    Example:: Client and Bank, Car and Engine 
+        Simple Objects creation
+
+Constructor:
+    For Allocation of Memory
+Destructor:
+    For De-Allocation of Memory
