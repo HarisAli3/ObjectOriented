@@ -161,6 +161,74 @@ int main(){
 
 
 
+
+
+
+
+
+
+
+Question - 3
+
+#include <iostream>
+using namespace std;
+class Address{
+public:
+    string street;
+    string city;
+    string state;
+    Address(){
+        street = "12";
+        city = "28";
+        state = "Punjab";
+    }
+    ~Address(){
+        cout << "City";
+        cout<< "Street";
+        cout << "Punjab";
+    }
+};
+class Person{
+public:
+    string name;
+    string age;
+    Person(Address *x){
+        name = "Haris Ali";
+        age = "19";
+    }
+    ~Person(){
+        cout << "Test";
+    }
+};
+int main(){
+    Address *a = new Address;
+    Person p(a);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Relation:
   Many to one
   one to Many
