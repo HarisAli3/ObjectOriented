@@ -1,0 +1,40 @@
+Project:
+  1 - Every Group
+  2 - Major Marks on Project
+  3 -
+
+Presentation:
+  Presentation , File-Handling
+  
+  1 - Problem-Statement 
+  2 - Background, how many are made before
+  2 - Method and Results
+  3 - Techniques
+  4 - Results
+  5 - Future Work
+
+  PPT 
+  
+  * To the Point
+  Each and Every Thing
+
+
+Polymorphism:
+  Compile-Time:
+    * Early Binding
+    * Static Polymorphism:
+        1 - Method Overloading
+        2 - Operator Overloading
+  Run-Time:
+    * Late Binding
+    * Dynamic Polymorphism
+        1 - Function Overriding
+        2 - Virtual Function
+          -> Pure Virtual Function
+            -> Abstract Class
+
+  Unary:
+
+  Binary:
+
+  Ternary:
